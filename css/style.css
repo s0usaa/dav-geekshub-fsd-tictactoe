@@ -1,0 +1,15 @@
+body{
+    background-color: red;
+}
+
+.logo{
+    height: 20vh;
+}
+
+.ticTac{
+    height: 15vh;
+}
+
+.buttonStart{
+    height: 80vh;
+}
