@@ -1,15 +1,40 @@
+/* estilos de index */
+
 body{
-    background-color: red;
+    background-color: darkorange;
+}
+
+.head{
+    height: 15vh;
 }
 
 .logo{
-    height: 20vh;
-}
-
-.ticTac{
     height: 15vh;
 }
 
 .buttonStart{
     height: 80vh;
+}
+
+/* estilos de players */
+
+.buttonPlay{
+    height: 50vh;
+}
+
+/* estilos tablero */
+
+.table{
+    height: 80vh;
+}
+
+.gameTable{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: lightcyan;
+}
+
+.cell{
+    border: solid black;
 }
