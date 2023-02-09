@@ -22,26 +22,36 @@
     </div>
     <!-- FIN Head -->
     
+    <!-- Inputs Players -->
     <div class="container-fluid">
         <div class="row buttonPlay justify-content-center mt-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <div class="mb-5">
                     <label for="exampleFormControlInput1" class="form-label">Name Player 1</label>
-                    <input type="text" class="form-control" id="namePlayer1" placeholder="Introduce el nombre...">
-                  </div>
-                  <div class="mb-3">
+                    <input type="text" class="form-control inputPlayers" id="P1" placeholder="Introduce el nombre..." name="players1">
+                </div>
+                <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Name Player 2</label>
-                    <input type="text" class="form-control" id="namePlayer2" placeholder="Introduce el nombre...">
-                  </div>
+                    <input type="text" class="form-control inputPlayers" id="P2" placeholder="Introduce el nombre..." name="players2">
+                </div>
                 </div>
             </div>
+
+            <!-- FIN Inputs Players -->
+
+            <!-- Boton Empezar Partida -->
+
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-8 col-lg-6 d-flex justify-content-center">
                     <button type="button" class="btn btn-dark btn-lg">
-                        <a href="/pages/tablero.html">Pres Start</a>
+                        <a href="/pages/tablero.html" id="botonPlayers" onclick="nuevaPantalla()">Pres Start</a>
                     </button>
                 </div>
               </div>
         </div>
+
+        <!-- FIN Boton Empezar Partida -->
+
+        <script src="/js/main.js"></script>
 </body>
 </html>

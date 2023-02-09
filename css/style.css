@@ -37,4 +37,10 @@ body{
 
 .cell{
     border: solid black;
+    height: 6em;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
 }
