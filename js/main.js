@@ -1,3 +1,8 @@
+let turno = true;
+let fichaP1 = 3;
+let fichaP2 = 3;
+let tablero = Array.from(document.getElementsByClassName("cell"));
+
 let tableroLogico = ["","","","","","","","",""];
 
 let combinacionGanadora = [
@@ -16,10 +21,7 @@ const comprueboGanador = () => {
 
 }
 
-let turno = true;
-let fichaP1 = 3;
-let fichaP2 = 3;
-let tablero = Array.from(document.getElementsByClassName("cell"));
+
 
 tablero.map(
     (casilla) => {
@@ -80,7 +82,6 @@ inputs.map(
         })
     }
 )
-
 
 //Creo la función cambiaPantalla que guardará en sessionStorage y después cambiará de pantalla
 
