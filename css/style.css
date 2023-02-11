@@ -1,7 +1,7 @@
 /* estilos de index */
 
 body{
-    background-color: darkorange;
+    background: linear-gradient(to right bottom, rgb(33, 172, 123),white 80%)
 }
 
 .head{
@@ -13,13 +13,17 @@ body{
 }
 
 .buttonStart{
-    height: 80vh;
+    height: 85vh;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* estilos de players */
 
 .buttonPlay{
-    height: 50vh;
+    height: 78vh;
 }
 
 /* estilos tablero */
