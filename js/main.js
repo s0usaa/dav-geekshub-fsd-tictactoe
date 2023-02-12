@@ -17,12 +17,50 @@ let combinacionGanadora = [
 ];
 
 const comprueboGanador = () => {
-  console.log(tableroLogico);
-};
-
+        //Combi 1
+    if ((tableroLogico[combinacionGanadora[0][0]] === "X") && (tableroLogico[combinacionGanadora[0][1]] === "X") && (tableroLogico[combinacionGanadora[0][2]] === "X")){
+        window.location.href= "/pages/winners.html" 
+} else if  ((tableroLogico[combinacionGanadora[0][0]] === "O") && (tableroLogico[combinacionGanadora[0][1]] === "O") && (tableroLogico[combinacionGanadora[0][2]] === "O")){
+        window.location.href= "/pages/winners.html"
+        //Combi 2
+}else if  ((tableroLogico[combinacionGanadora[1][0]] === "O") && (tableroLogico[combinacionGanadora[1][1]] === "O") && (tableroLogico[combinacionGanadora[1][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if ((tableroLogico[combinacionGanadora[1][0]] === "X") && (tableroLogico[combinacionGanadora[1][1]] === "X") && (tableroLogico[combinacionGanadora[1][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+        //Combi 3
+}else if ((tableroLogico[combinacionGanadora[2][0]] === "O") && (tableroLogico[combinacionGanadora[2][1]] === "O") && (tableroLogico[combinacionGanadora[2][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if ((tableroLogico[combinacionGanadora[2][0]] === "X") && (tableroLogico[combinacionGanadora[2][1]] === "X") && (tableroLogico[combinacionGanadora[2][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+        //Combi 4
+}else if ((tableroLogico[combinacionGanadora[3][0]] === "O") && (tableroLogico[combinacionGanadora[3][1]] === "O") && (tableroLogico[combinacionGanadora[3][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if ((tableroLogico[combinacionGanadora[3][0]] === "X") && (tableroLogico[combinacionGanadora[3][1]] === "X") && (tableroLogico[combinacionGanadora[3][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+        //Combi 5
+}else if ((tableroLogico[combinacionGanadora[4][0]] === "O") && (tableroLogico[combinacionGanadora[4][1]] === "O") && (tableroLogico[combinacionGanadora[4][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if ((tableroLogico[combinacionGanadora[4][0]] === "X") && (tableroLogico[combinacionGanadora[4][1]] === "X") && (tableroLogico[combinacionGanadora[4][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+    //Combi 6
+}else if ((tableroLogico[combinacionGanadora[5][0]] === "O") && (tableroLogico[combinacionGanadora[5][1]] === "O") && (tableroLogico[combinacionGanadora[5][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if ((tableroLogico[combinacionGanadora[5][0]] === "X") && (tableroLogico[combinacionGanadora[5][1]] === "X") && (tableroLogico[combinacionGanadora[5][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+    //Combi 7
+}else if ((tableroLogico[combinacionGanadora[6][0]] === "O") && (tableroLogico[combinacionGanadora[6][1]] === "O") && (tableroLogico[combinacionGanadora[6][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if ((tableroLogico[combinacionGanadora[6][0]] === "X") && (tableroLogico[combinacionGanadora[6][1]] === "X") && (tableroLogico[combinacionGanadora[6][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+    //Combi 8
+}else if ((tableroLogico[combinacionGanadora[7][0]] === "O") && (tableroLogico[combinacionGanadora[7][1]] === "O") && (tableroLogico[combinacionGanadora[7][2]] === "O")){
+    window.location.href= "/pages/winners.html"
+}else if((tableroLogico[combinacionGanadora[7][0]] === "X") && (tableroLogico[combinacionGanadora[7][1]] === "X") && (tableroLogico[combinacionGanadora[7][2]] === "X")){
+    window.location.href= "/pages/winners.html"
+}
+}
 // Resetear jugadores y partida
 const resetPlayers = () => {
-    
     sessionStorage.clear();
     setTimeout(()=>{
         window.open("/pages/players.html", "_self");
@@ -30,9 +68,8 @@ const resetPlayers = () => {
 };
 
 //Resetear partida
-
 const resetGame = () => {
-    location.reload();
+    window.location.reload();
 };
 
 // Pintar el tablero con X y O
@@ -42,15 +79,11 @@ tablero.map((casilla) => {
     if (casilla.innerHTML === "" && (fichaP1 > 0 || fichaP2 > 0)) {
       //Aqui PINTO el simbolo, dependiendo del turno
       casilla.innerHTML = turno ? "X" : "O";
-
+      //Restamos una ficha al jugador
       turno ? fichaP1-- : fichaP2--;
-
-      //Finalmente, además de que en pantalla quede marcada, guardo la posición
-      //que ocupa en mi tablero lógico
+    //   guardo la posición que ocupa en mi tablero lógico
       tableroLogico[casilla.id] = turno ? "X" : "O";
-
       comprueboGanador();
-
       //Cambiamos de turno
       turno = !turno;
     }
@@ -90,8 +123,6 @@ const nuevaPantalla = () => {
   if (players.player1 === "" || players.player2 === "") {
     return;
   }
-
-  //Si tienen valor entra aqui y guarda los nombres
 
   sessionStorage.setItem("playersInfo", JSON.stringify(players));
 
