@@ -52,7 +52,6 @@ const comprueboGanador = () => {
         }
 }
 
-
 // Resetear jugadores y partida
 const resetPlayers = () => {
     sessionStorage.clear();
@@ -66,7 +65,7 @@ const resetGame = () => {
     window.location.reload();
 };
 
-// Pintar el tablero con X y O
+// Pintar el tablero
 tablero.map((casilla) => {
   casilla.addEventListener("click", () => {
     //Compruebo que SI puedo pintar la X o la O.
@@ -127,6 +126,6 @@ const nuevaPantalla = () => {
 
   setTimeout(() => {
     //Abre a la ventana del tablero
-    window.open("/pages/tablero.html", "_self");
+    window.open("../pages/tablero.html", "_self");
   }, 500);
 };
