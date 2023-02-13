@@ -18,47 +18,34 @@ let combinacionGanadora = [
 
 const comprueboGanador = () => {
         //Combi 1
-    if ((tableroLogico[combinacionGanadora[0][0]] === "X") && (tableroLogico[combinacionGanadora[0][1]] === "X") && (tableroLogico[combinacionGanadora[0][2]] === "X")){
-        window.location.href= "/pages/winners.html" 
-} else if  ((tableroLogico[combinacionGanadora[0][0]] === "O") && (tableroLogico[combinacionGanadora[0][1]] === "O") && (tableroLogico[combinacionGanadora[0][2]] === "O")){
-        window.location.href= "/pages/winners.html"
+        if ((tableroLogico[0] === tableroLogico[1]) && (tableroLogico[1] === tableroLogico[2]) && tableroLogico[0] !== ""){
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 2
-}else if  ((tableroLogico[combinacionGanadora[1][0]] === "O") && (tableroLogico[combinacionGanadora[1][1]] === "O") && (tableroLogico[combinacionGanadora[1][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if ((tableroLogico[combinacionGanadora[1][0]] === "X") && (tableroLogico[combinacionGanadora[1][1]] === "X") && (tableroLogico[combinacionGanadora[1][2]] === "X")){
-    window.location.href= "/pages/winners.html"
+        }else if ((tableroLogico[3] === tableroLogico[4]) && (tableroLogico[3] === tableroLogico[5]) && tableroLogico[3] !== ""){
+          window.location.href= "/pages/winners.html"
         //Combi 3
-}else if ((tableroLogico[combinacionGanadora[2][0]] === "O") && (tableroLogico[combinacionGanadora[2][1]] === "O") && (tableroLogico[combinacionGanadora[2][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if ((tableroLogico[combinacionGanadora[2][0]] === "X") && (tableroLogico[combinacionGanadora[2][1]] === "X") && (tableroLogico[combinacionGanadora[2][2]] === "X")){
-    window.location.href= "/pages/winners.html"
+        }else if ((tableroLogico[6] === tableroLogico[7]) && (tableroLogico[6] === tableroLogico[8] && tableroLogico[6] !== "")){
+          window.location.href= "/pages/winners.html"
         //Combi 4
-}else if ((tableroLogico[combinacionGanadora[3][0]] === "O") && (tableroLogico[combinacionGanadora[3][1]] === "O") && (tableroLogico[combinacionGanadora[3][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if ((tableroLogico[combinacionGanadora[3][0]] === "X") && (tableroLogico[combinacionGanadora[3][1]] === "X") && (tableroLogico[combinacionGanadora[3][2]] === "X")){
-    window.location.href= "/pages/winners.html"
+        }else if ((tableroLogico[0] === tableroLogico[3]) && (tableroLogico[0] === tableroLogico[6]) && tableroLogico[0] !== ""){
+          window.location.href= "/pages/winners.html"
         //Combi 5
-}else if ((tableroLogico[combinacionGanadora[4][0]] === "O") && (tableroLogico[combinacionGanadora[4][1]] === "O") && (tableroLogico[combinacionGanadora[4][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if ((tableroLogico[combinacionGanadora[4][0]] === "X") && (tableroLogico[combinacionGanadora[4][1]] === "X") && (tableroLogico[combinacionGanadora[4][2]] === "X")){
-    window.location.href= "/pages/winners.html"
-    //Combi 6
-}else if ((tableroLogico[combinacionGanadora[5][0]] === "O") && (tableroLogico[combinacionGanadora[5][1]] === "O") && (tableroLogico[combinacionGanadora[5][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if ((tableroLogico[combinacionGanadora[5][0]] === "X") && (tableroLogico[combinacionGanadora[5][1]] === "X") && (tableroLogico[combinacionGanadora[5][2]] === "X")){
-    window.location.href= "/pages/winners.html"
-    //Combi 7
-}else if ((tableroLogico[combinacionGanadora[6][0]] === "O") && (tableroLogico[combinacionGanadora[6][1]] === "O") && (tableroLogico[combinacionGanadora[6][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if ((tableroLogico[combinacionGanadora[6][0]] === "X") && (tableroLogico[combinacionGanadora[6][1]] === "X") && (tableroLogico[combinacionGanadora[6][2]] === "X")){
-    window.location.href= "/pages/winners.html"
-    //Combi 8
-}else if ((tableroLogico[combinacionGanadora[7][0]] === "O") && (tableroLogico[combinacionGanadora[7][1]] === "O") && (tableroLogico[combinacionGanadora[7][2]] === "O")){
-    window.location.href= "/pages/winners.html"
-}else if((tableroLogico[combinacionGanadora[7][0]] === "X") && (tableroLogico[combinacionGanadora[7][1]] === "X") && (tableroLogico[combinacionGanadora[7][2]] === "X")){
-    window.location.href= "/pages/winners.html"
+        }else if ((tableroLogico[1] === tableroLogico[4]) && (tableroLogico[1] === tableroLogico[7]) && tableroLogico[1] !== ""){
+          window.location.href= "/pages/winners.html"
+        //Combi 6
+        }else if ((tableroLogico[2] === tableroLogico[5]) && (tableroLogico[2] === tableroLogico[8]) && tableroLogico[2] !== ""){
+          window.location.href= "/pages/winners.html"
+        //Combi 7
+        }else if ((tableroLogico[0] === tableroLogico[4]) && (tableroLogico[0] === tableroLogico[8]) && tableroLogico[0] !== ""){
+          window.location.href= "/pages/winners.html"
+        //Combi 8
+        }else if((tableroLogico[2] === tableroLogico[4]) && (tableroLogico[2] === tableroLogico[6]) && tableroLogico[2] !== ""){
+          window.location.href= "/pages/winners.html"
+        }
 }
-}
+
+
 // Resetear jugadores y partida
 const resetPlayers = () => {
     sessionStorage.clear();
@@ -86,9 +73,16 @@ tablero.map((casilla) => {
       comprueboGanador();
       //Cambiamos de turno
       turno = !turno;
-    }
-  });
-});
+    }else if (casilla.innerHTML === "X" && fichaP1 === 0 && turno == true){
+      casilla.innerHTML = "";
+      tableroLogico[casilla.id] = "";
+      fichaP1++;
+    }else if (casilla.innerHTML === "O" && fichaP2 === 0 && turno == false){
+      casilla.innerHTML = "";
+      tableroLogico[casilla.id] = "";
+      fichaP2++;
+}})
+})
 
 let players = {
   player1: "",
@@ -108,8 +102,6 @@ inputs.map((elemento) => {
       if (elemento.name == jugador) {
         //Ahora es cuando meto el valor en el objeto
         players[jugador] = elemento.value;
-
-        console.log(players);
       }
     }
   });
