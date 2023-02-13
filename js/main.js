@@ -23,25 +23,32 @@ const comprueboGanador = () => {
           window.open("../pages/winners.html","_self");
         //Combi 2
         }else if ((tableroLogico[3] === tableroLogico[4]) && (tableroLogico[3] === tableroLogico[5]) && tableroLogico[3] !== ""){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 3
         }else if ((tableroLogico[6] === tableroLogico[7]) && (tableroLogico[6] === tableroLogico[8] && tableroLogico[6] !== "")){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 4
         }else if ((tableroLogico[0] === tableroLogico[3]) && (tableroLogico[0] === tableroLogico[6]) && tableroLogico[0] !== ""){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 5
         }else if ((tableroLogico[1] === tableroLogico[4]) && (tableroLogico[1] === tableroLogico[7]) && tableroLogico[1] !== ""){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 6
         }else if ((tableroLogico[2] === tableroLogico[5]) && (tableroLogico[2] === tableroLogico[8]) && tableroLogico[2] !== ""){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 7
         }else if ((tableroLogico[0] === tableroLogico[4]) && (tableroLogico[0] === tableroLogico[8]) && tableroLogico[0] !== ""){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         //Combi 8
         }else if((tableroLogico[2] === tableroLogico[4]) && (tableroLogico[2] === tableroLogico[6]) && tableroLogico[2] !== ""){
-          window.location.href= "/pages/winners.html"
+          turno ? sessionStorage.setItem("ganador", "X"): sessionStorage.setItem("ganador", "O");
+          window.open("../pages/winners.html","_self");
         }
 }
 
