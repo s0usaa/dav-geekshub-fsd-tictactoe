@@ -3,6 +3,8 @@ let fichaP1 = 3;
 let fichaP2 = 3;
 let tablero = Array.from(document.getElementsByClassName("cell"));
 
+
+
 let tableroLogico = ["", "", "", "", "", "", "", "", ""];
 
 let combinacionGanadora = [
@@ -56,7 +58,7 @@ const comprueboGanador = () => {
 const resetPlayers = () => {
     sessionStorage.clear();
     setTimeout(()=>{
-        window.open("/pages/players.html", "_self");
+        window.open("../pages/players.html", "_self");
 },500);
 };
 
@@ -74,6 +76,8 @@ tablero.map((casilla) => {
       casilla.innerHTML = turno ? "X" : "O";
       //Restamos una ficha al jugador
       turno ? fichaP1-- : fichaP2--;
+      document.getElementById("player1Text").innerHTML = `Te quedan ${fichaP1} fichas`;
+      document.getElementById("player2Text").innerHTML = `Te quedan ${fichaP2} fichas`;
     //   guardo la posición que ocupa en mi tablero lógico
       tableroLogico[casilla.id] = turno ? "X" : "O";
       comprueboGanador();
@@ -83,10 +87,12 @@ tablero.map((casilla) => {
       casilla.innerHTML = "";
       tableroLogico[casilla.id] = "";
       fichaP1++;
+      document.getElementById("player1Text").innerHTML = `Te quedan ${fichaP1} fichas`;
     }else if (casilla.innerHTML === "O" && fichaP2 === 0 && turno == false){
       casilla.innerHTML = "";
       tableroLogico[casilla.id] = "";
       fichaP2++;
+      document.getElementById("player2Text").innerHTML = `Te quedan ${fichaP2} fichas`;
 }})
 })
 
@@ -96,14 +102,11 @@ let players = {
 };
 
 //Capturo los input por su className...
-
 let inputs = Array.from(document.getElementsByClassName("inputPlayers"));
-
 //Mapeo los inputs de los jugadores..
 inputs.map((elemento) => {
   elemento.addEventListener("input", () => {
     //Según vamos escribiendo en el input, iremos actualizando el objeto players..
-
     for (let jugador in players) {
       if (elemento.name == jugador) {
         //Ahora es cuando meto el valor en el objeto
@@ -114,16 +117,13 @@ inputs.map((elemento) => {
 });
 
 //Creo la función que guardará en sessionStorage y después cambiará de pantalla
-
 const nuevaPantalla = () => {
   //Si no tienen valor no continua
 
   if (players.player1 === "" || players.player2 === "") {
     return;
   }
-
   sessionStorage.setItem("playersInfo", JSON.stringify(players));
-
   setTimeout(() => {
     //Abre a la ventana del tablero
     window.open("../pages/tablero.html", "_self");
