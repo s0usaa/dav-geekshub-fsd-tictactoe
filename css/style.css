@@ -1,7 +1,16 @@
 /* estilos de index */
+@font-face {
+    font-family: "jedi";
+    src: url(./jedi.ttf);
+}
+
 
 body{
-    background: linear-gradient(to right bottom, rgb(33, 172, 123),white 80%)
+    /* background: linear-gradient(to right bottom, rgb(33, 172, 123),white 80%) */
+    background-image: url(../img/fondo.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .head{
@@ -12,13 +21,18 @@ body{
     height: 15vh;
 }
 
+.btn{
+    height: 4em;
+}
+
 .buttonStart{
     height: 85vh;
-    font-family: fantasy;
+    font-family: jedi;
 }
 
 a{
     text-decoration: none;
+    color: gold;
 }
 
 /* estilos de players */
