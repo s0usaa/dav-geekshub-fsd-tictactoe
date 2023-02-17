@@ -1,8 +1,3 @@
-/* estilos de index */
-/* @font-face {
-    font-family: "jedi";
-    src: url(./jedi.ttf);
-} */
 
 @font-face {
     font-family: "jedi2";
@@ -53,9 +48,13 @@ a{
 /* estilos de players */
 
 .buttonPlay{
-    height: 78vh;
-    font-family: fantasy;
-    font-weight: bolder;
+    height: 80vh;
+    font-family: jedi2;
+}
+
+.playerbtn{
+    height: 3em;
+    color: gold;
 }
 
 /* estilos tablero */

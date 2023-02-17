@@ -12,10 +12,10 @@
 <body>
     <!-- Head -->
     <div class="container-fluid">
-        <div class="row head p-0 m-0">
+        <div class="row head text-center p-0 m-0">
             <div class="col d-flex justify-content-center align-items-center">
-                <a href="/index.html">
-                    <img src="/img/Tictaclogo.avif" alt="TicTacTou" class="logo">
+                <a class="headText" href="/index.html">
+                tic tac toe Wars
                 </a>
             </div>
         </div>
@@ -24,20 +24,20 @@
     
     <!-- Inputs Players -->
     <div class="container-fluid">
-        <div class="row buttonPlay justify-content-center mt-5">
+        <div class="row buttonPlay justify-content-center align-items-center">
             <div class="col-10 col-sm-8 col-lg-6">
-                <div class="mb-5">
-                    <label for="exampleFormControlInput1" class="form-label">Name Player 1</label>
-                    <input type="text" class="form-control inputPlayers" maxlength="10" id="P1" placeholder="Introduce el nombre..." name="player1">
+                <div class="mb-4">
+                    <label for="exampleFormControlInput1" class="form-label text-danger fs-3">Darkside Player</label>
+                    <input type="text" style="text-transform:lowercase" class="form-control inputPlayers text-danger" maxlength="10" id="P1" placeholder="introduce el nombre..." name="player1">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Name Player 2</label>
-                    <input type="text" class="form-control inputPlayers" maxlength="10" id="P2" placeholder="Introduce el nombre..." name="player2">
+                    <label for="exampleFormControlInput1" class="form-label text-primary fs-3">Lightside Player</label>
+                    <input type="text" style="text-transform:lowercase" class="form-control inputPlayers text-primary" maxlength="10" id="P2" placeholder="introduce el nombre..." name="player2">
                 </div>
                 <!-- FIN Inputs Players -->
                 <!-- Boton Start -->
                 <div class="d-flex justify-content-center " onclick="nuevaPantalla()">
-                    <button type="button" class="btn btn-dark btn-lg">
+                    <button type="button" class="btn btn-dark btn-lg border-warning playerbtn">
                     Press Start
                     </button>
                 </div>
