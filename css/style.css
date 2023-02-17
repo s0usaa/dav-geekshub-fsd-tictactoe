@@ -1,12 +1,16 @@
 /* estilos de index */
-@font-face {
+/* @font-face {
     font-family: "jedi";
     src: url(./jedi.ttf);
+} */
+
+@font-face {
+    font-family: "jedi2";
+    src: url(./jedi2.ttf);
 }
 
 
 body{
-    /* background: linear-gradient(to right bottom, rgb(33, 172, 123),white 80%) */
     background-image: url(../img/fondo.webp);
     background-size: cover;
     background-position: center;
@@ -14,20 +18,31 @@ body{
 }
 
 .head{
-    height: 15vh;
+    height: 20vh;
 }
 
-.logo{
-    height: 15vh;
+.headText{
+    font-family: jedi2;
+    font-size: 1.8rem;
 }
 
-.btn{
+.mainbtn{
     height: 4em;
+    font-size: 1.5rem;
+}
+
+@media (min-width:650px){
+    .headText{
+        font-size: 3.5rem;
+    }
+    .mainbtn{
+        font-size: 2rem;
+    }
 }
 
 .buttonStart{
-    height: 85vh;
-    font-family: jedi;
+    height: 80vh;
+    font-family: jedi2;
 }
 
 a{
