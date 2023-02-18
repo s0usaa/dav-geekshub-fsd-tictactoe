@@ -43,7 +43,7 @@ a{
 
 /* estilos de players */
 
-.buttonPlay{
+.menuPlay{
     height: 80vh;
     font-family: jedi2;
 }
@@ -109,6 +109,12 @@ a{
     border-left: none;
 }
 
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8){
+    border-bottom: none;
+}
+
 .cell:nth-child(3n + 3){
     border-right: none;
 }
@@ -130,12 +136,6 @@ a{
     }
 }
 
-.cell:last-child,
-.cell:nth-child(7),
-.cell:nth-child(8){
-    border-bottom: none;
-}
-
 .btnBoard{
     color: gold;
 }
@@ -144,5 +144,9 @@ a{
 
 .victory{
     height: 80vh;
-    font-family: fantasy;
+    font-family: jedi2;
+}
+
+.btnWin{
+    color: gold;
 }

@@ -75,8 +75,8 @@ tablero.map((casilla) => {
       casilla.innerHTML = turno ? "x" : "o";
       //Restamos una ficha al jugador
       turno ? fichaP1-- : fichaP2--;
-      document.getElementById("player1Text").innerHTML = `Fichas restantes ${fichaP1}`;
-      document.getElementById("player2Text").innerHTML = `Fichas restantes ${fichaP2}`;
+      document.getElementById("player1Text").innerHTML = `tokens left ${fichaP1}`;
+      document.getElementById("player2Text").innerHTML = `tokens left ${fichaP2}`;
     //   guardo la posición que ocupa en mi tablero lógico
       tableroLogico[casilla.id] = turno ? "x" : "o";
       comprueboGanador();
@@ -86,12 +86,12 @@ tablero.map((casilla) => {
       casilla.innerHTML = "";
       tableroLogico[casilla.id] = "";
       fichaP1++;
-      document.getElementById("player1Text").innerHTML = `Fichas restantes ${fichaP1}`;
+      document.getElementById("player1Text").innerHTML = `tokens left ${fichaP1}`;
     }else if (casilla.innerHTML === "o" && fichaP2 === 0 && turno == false){
       casilla.innerHTML = "";
       tableroLogico[casilla.id] = "";
       fichaP2++;
-      document.getElementById("player2Text").innerHTML = `Fichas restantes ${fichaP2}`;
+      document.getElementById("player2Text").innerHTML = `tokens left ${fichaP2}`;
 }})
 })
 
