@@ -1,9 +1,7 @@
-
 @font-face {
     font-family: "jedi2";
     src: url(./jedi2.ttf);
 }
-
 
 body{
     background-image: url(../img/fondo.webp);
@@ -22,18 +20,16 @@ body{
 }
 
 .mainbtn{
-    height: 4em;
+    height: 3em;
     font-size: 1.5rem;
 }
 
-@media (min-width:650px){
+@media (min-width:541px){
     .headText{
-        font-size: 3.5rem;
-    }
-    .mainbtn{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
+
 
 .buttonStart{
     height: 80vh;
@@ -57,11 +53,30 @@ a{
     color: gold;
 }
 
+.inputPlayers{
+    height: 3.5em;
+}
+
+@media (min-width:722px){
+    .headText{
+        font-size: 4.1rem;
+    }
+    .mainbtn{
+        font-size: 2rem;
+    }
+    .inputPlayers{
+        font-size: 1.3em;
+    }
+    .playerbtn{
+        font-size: 2rem;
+    }
+}
+
 /* estilos tablero */
 
 .table{
     height: 85vh;
-    font-family: fantasy;
+    font-family: jedi2;
 }
 
 .gameTable{
