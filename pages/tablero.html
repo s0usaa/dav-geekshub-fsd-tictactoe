@@ -32,41 +32,43 @@
       <div class="row table justify-content-center align-items-center p-0 m-0">
         <div class="col-12 col-lg-3">
           <!-- Player 1 -->
-          <div class="card m-1">
+          <div class="card">
             <div class="card-body">
-              <h5 class="card-title text-center mb-3" id="player1"></h5>
-              <p id="player1Text">Te quedan 3 fichas</p>
-            </div>
-          </div>
-          <!-- Tablero -->
-          <div class="gameTable">
-            <div class="cell" id="0"></div>
-            <div class="cell" id="1"></div>
-            <div class="cell" id="2"></div>
-            <div class="cell" id="3"></div>
-            <div class="cell" id="4"></div>
-            <div class="cell" id="5"></div>
-            <div class="cell" id="6"></div>
-            <div class="cell" id="7"></div>
-            <div class="cell" id="8"></div>
-          </div>
-          <div class="card m-4">
-            <div class="card-body">
-              <h5 class="card-title text-center" id="player2"></h5>
-              <p id="player2Text">Te quedan 3 fichas</p>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex justify-content-center gap-4">
-              <button type="button" class="btn btn-dark btn-lg" onclick="resetPlayers()">
-                Select Players
-              </button>
-              <button type="button" class="btn btn-dark btn-lg" onclick="resetGame()">
-                Reset
-              </button>
+              <h3 class="card-title text-center mb-3 text-danger h5Text" id="player1"></h3>
+              <p id="player1Text" class="text-center text-warning">Fichas restantes 3</p>
             </div>
           </div>
         </div>
+          <!-- Tablero -->
+          <div class="col-12 col-lg-6">
+            <div class="gameTable">
+              <div class="cell" id="0"></div>
+              <div class="cell" id="1"></div>
+              <div class="cell" id="2"></div>
+              <div class="cell" id="3"></div>
+              <div class="cell" id="4"></div>
+              <div class="cell" id="5"></div>
+              <div class="cell" id="6"></div>
+              <div class="cell" id="7"></div>
+              <div class="cell" id="8"></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-center text-primary h5Text" id="player2"></h3>
+                <p id="player2Text" class="text-center text-warning">Fichas restantes 3</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center gap-3">
+              <button type="button" class="btn btn-dark border-warning btnBoard" onclick="resetPlayers()">
+                Select Players
+              </button>
+              <button type="button" class="btn btn-dark border-warning btnBoard" onclick="resetGame()">
+                Reset Game
+              </button>
+          </div>
       </div>
     </div>
 
