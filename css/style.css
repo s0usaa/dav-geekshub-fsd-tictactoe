@@ -134,6 +134,19 @@ a{
     .btnBoard{
         height: 4em;
     }
+    .textWin{
+        font-size: 2rem;
+    }
+    .textWinP{
+        font-size: 3rem;
+    }
+    .textDesc{
+        font-size: 1.3rem;
+    }
+    .btnWin{
+        font-size: 1.3rem;
+        height: 4em;
+    }
 }
 
 .btnBoard{
